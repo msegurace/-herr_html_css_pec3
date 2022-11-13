@@ -368,9 +368,94 @@ iframe {
 }
 
 .obra {
-  max-width: 500px;
+  max-width: 1000px; 
   margin: 0 auto;
-  text-align: justify;
+  text-align: left;
 }
 
 
+/* Tree */
+ul, #myUL {
+  list-style-type: none;
+}
+
+#arbolObra {
+  margin: 0;
+  padding: 0;
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {  
+  transform: rotate(90deg);  
+}
+
+.nested {
+  display: none;
+  margin-left: 20px;
+}
+
+.nested li {
+  list-style-type: circle;
+  font-size: 1.5rem;
+}
+
+.arbolLi {
+  list-style-type: square;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 23px;
+}
+
+.active {
+  display: block;
+}
+
+/* DETALLES */
+.detalle_container {
+  max-width: 1000px;
+  flex-flow: wrap;
+  margin: 0 auto 40px;
+  display: flex;
+
+}
+
+.serie {
+ 
+}
+.libros { 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-flow: row;
+  gap: 30px 30px;
+  justify-items: stretch;
+  margin: 0 auto;
+  text-align: center;
+}
+
+figure img {
+  height: 300px;
+  width: 200px;
+}
+
+figure figcaption {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+  
+}

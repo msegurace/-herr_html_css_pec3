@@ -2,6 +2,8 @@
   "name": "pec1",
   "version": "1.0.0",
   "description": "PEC1. Desarrollo de una web.",
+  "author": "Moisés Segura Cedrés <msegurace@uoc.edu>",
+  "license": "ISC",
   "source": ["./src/index.html", "./src/categoria.html", "./src/detalle.html", "./src/enlaces.html", "./src/presentacion.html"],
   "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead",
   "scripts": {
@@ -16,8 +18,6 @@
     "url": "https://github.com/msegurace/herr_html_css_pec1.git"
   },
   "keywords": [],
-  "author": "Moisés Segura Cedrés <msegurace@uoc.edu>",
-  "license": "ISC",
   "devDependencies": {
     "parcel": "latest",
     "autoprefixer": "^10.4.12",

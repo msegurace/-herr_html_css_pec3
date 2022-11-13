@@ -40,26 +40,26 @@
     -->
         <h2>Su obra</h2>
         <div class="obra">
-            <ul>
-                <li>Episodios Nacionales
-                    <ul>
-                        <li>Primera serie</li>
-                        <li>Segunda serie</li>
-                        <li>Tercera serie</li>
-                        <li>Cuarta serie</li>
-                        <li>Quinta serie</li>
-                    </ul>
-                </li>
-                <li>Novelas
-                    <ul>
-                        <li>Serie de la primera época</li>
-                        <li>Serie Contemporánea</li>
-                    </ul>
-                </li>
-                <li>Teatro</li>
-                <li>Narrativa breve</li>
-                <li>Discursos y ensayos</li>
-            </ul>
+          <ul id="arbolObra">
+            <li><span class="caret">Episodios Nacionales</span>            
+              <ul class="nested">
+                <li><a href="episodios.html#PrimeraSerie">Primera serie</a></li>
+                <li><a href="episodios.html#SegundaSerie">Segunda serie</a></li>
+                <li><a href="episodios.html#TerceraSerie">Tercera serie</a></li>
+                <li><a href="episodios.html#CuartaSerie">Cuarta serie</a></li>
+                <li><a href="episodios.html#QuintaSerie">Quinta serie</a></li>
+              </ul>
+            </li>
+            <li><span class="caret">Novelas</span>
+                <ul class="nested">
+                    <li>Serie de la primera época</li>
+                    <li>Serie Contemporánea</li>
+                </ul>
+            </li>
+            <li class="arbolLi">Teatro</li>
+            <li class="arbolLi">Narrativa breve</li>
+            <li class="arbolLi">Discursos y ensayos</li>
+          </ul>
         </div>
         <h2>Línea de tiempo.</h2>
         <div class="timeline">
@@ -140,7 +140,7 @@
                 <div class="content">
                   <h3>1873</h3>
                   <p>Se cierra El Debate y evoluciona hacia la novela histórica. Publica Trafalgar. Escribe en La Guirnalda.</p>
-                  <img src="img/trafalgar.jpg">
+                  <img src="img/episodios/trafalgar.jpg">
                 </div>
               </div>
 
@@ -154,7 +154,6 @@
                 <div class="content">
                   <h3>1877</h3>
                   <p>Galdós mantiene una muy interesante disputa epistolar con Pereda a propósito de Gloria.</p>
-                  <img src="img/trafalgar.jpg">
                 </div>
               </div>
 
@@ -305,5 +304,16 @@
         </div>
     </footer>
     <script type="module" src="js/app.js"></script>
+    <script>
+      var toggler = document.getElementsByClassName("caret");
+      var i;
+      
+      for (i = 0; i < toggler.length; i++) {
+        toggler[i].addEventListener("click", function() {
+          this.parentElement.querySelector(".nested").classList.toggle("active");
+          this.classList.toggle("caret-down");
+        });
+      }
+      </script>
 </body>
 </html>
