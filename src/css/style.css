@@ -102,13 +102,14 @@ h3 {
 header {
   background-color: var(--color-texto);
   text-align: center;    
-  position: sticky;
+  /* position: sticky; */
   top: 0;
 }
 
 header a img {
   max-width: 180px;
   margin: 0 auto;
+  height: 100px;
 }
 
 @media (min-width: 480px) {
@@ -221,41 +222,92 @@ footer {
   display: grid;
   grid-template-areas:    "header"
                           "article"
-                          "newsletter"
                           "footer";
   grid-template-columns: 1fr;
   grid-gap: 0px;    
 }
 header {grid-area: header;}
-article {grid-area: article}
-.newsletter { grid-area:newsletter}
+article {grid-area: main;}
 footer{grid-area: footer;}
 
 .portada {
-  background: url("../img/portada.jpg") no-repeat;
+/*  background: url("../img/portada.jpg") no-repeat;
   background-size: cover;
   padding-bottom: 8px;
-  height: 300px;
+  height: 300px; */
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.portada div {
+.portada figure img {
+  width: 450px;
+  height: 305px;
+}
+
+.portada figure figcaption {
+  text-align: center;
+}
+
+.portada cite {
   display: block;
-  max-width: calc(300px + 10vw);
+  
   margin: 0 auto;
+  font-size: 1.5rem;
+  text-align: justify;
 }
 
 .portada  h1 {    
   display: block;
   font-size: calc(3.5rem + 1vw);
   font-weight: 900;
-  max-width: calc(300px + 10vw);
   text-align: center;
   padding: 60px 0 16px;
   margin: 0 auto;
   text-transform: none;
 }
 
+@media (max-width: 480px){
+  * {
+    margin: 3px;
+  }
+  .portada figure img {
+    width: 386px;
+    height: 300px;
+    margin: 20 auto;
+  }
 
+  .portada {
+    /*  background: url("../img/portada.jpg") no-repeat;
+      background-size: cover;
+      padding-bottom: 8px;
+      height: 300px; */
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 31px;
+      margin: 10 auto;
+    }
+}
+
+@media (min-width: 480px){
+ 
+}
+
+
+.texto_portada {
+  display: flex;
+  flex-direction: column;
+}
+
+.texto_portada .firma {
+  padding-top: 20px;
+  text-align: right;
+  font-size: 1.2rem;
+}
 
 .biografia {
   display: flex;
@@ -284,23 +336,14 @@ footer{grid-area: footer;}
   opacity: 0.5;
 }
 
-@media (max-width: 480px){
-  .biografia img {
-      width: 190px;
-  }
-}
-
-@media (min-width: 480px){
-  .biografia img {
-      width: 235px;
-  }
+.biografia figure {
+  margin: 0 auto;
 }
 
 .biografia figure figcaption {
-  font-size: 1.5rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  text-align: left;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 auto;
 }
 
 /* ENLACES.HTML */
@@ -343,14 +386,20 @@ dd {
   margin: 0 auto;
   padding: 20px;
 }
+@media screen and (max-width: 600px) {
+  .video {
+    width: 450px;
+    margin: 0 auto;
+  } 
+ }
 
 iframe {
   border: 0px;
 }
 
 .texto-videos {
-  background-color: var(--color-texto);
-  width: 560px;
+  background-color: var(--color-fondo-body);
+  width: 450px;
   height: auto;
   line-height: 1.5;
   font-size: 1.5rem;
@@ -361,8 +410,11 @@ iframe {
 .texto-videos  dt {
   text-transform: uppercase;
   font-weight: 900;
+  color: var(--color-texto-fondo-oscuro);
 }
-
+.texto-videos dd {
+  color: var(--color-texto-fondo-oscuro);
+}
 .texto-videos  dl {
   font-size: 1.7rem;
 }
@@ -448,14 +500,19 @@ ul, #myUL {
   text-align: center;
 }
 
-figure img {
-  height: 300px;
-  width: 200px;
+.libros figure img {
+  width: 222px;
+  height: 353px;
 }
 
-figure figcaption {
+.libros a:link {
   font-size: 1.5rem;
-  font-weight: 900;
-  text-align: center;
-  
+  color: var(--color-texto-fondo-oscuro);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+ .libros {
+  display: block;
+ } 
 }

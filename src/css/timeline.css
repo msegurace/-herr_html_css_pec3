@@ -1,11 +1,8 @@
   /* The actual timeline (the vertical ruler) */
   .timeline {
     position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1000px;
   }
-  
-  
   
   /* The actual timeline (the vertical ruler) */
   .timeline::after {
@@ -16,7 +13,7 @@
     top: 0;
     bottom: 0;
     left: 50%;
-    margin-left: -3px;
+    
   }
   
   /* Container around content */
@@ -27,8 +24,6 @@
     width: 50%;
   }
 
-
-  
   /* The circles on the timeline */
   .container::after {
     content: '';
@@ -46,7 +41,7 @@
   /* Place the container to the left */
   .left {
     left: 0;
-    width: 43.33%;
+    width: 42%;
   }
   
   /* Place the container to the right */
@@ -129,4 +124,8 @@
     .right {
       left: 0%;
     }
+    /* The actual content */
+  .content {
+    max-width: 60%;
+  }
   }
