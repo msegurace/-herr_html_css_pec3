@@ -218,17 +218,7 @@ footer {
 /* CONTENIDO ESPECÍFICO PARA INDEX.HTML */
 /****************************************/
 /* ESTRUCTURA DE LA PÁGINA */
-.index-container {
-  display: grid;
-  grid-template-areas:    "header"
-                          "article"
-                          "footer";
-  grid-template-columns: 1fr;
-  grid-gap: 0px;    
-}
-header {grid-area: header;}
-article {grid-area: main;}
-footer{grid-area: footer;}
+
 
 .portada {
 /*  background: url("../img/portada.jpg") no-repeat;
@@ -478,7 +468,7 @@ ul, #myUL {
   display: block;
 }
 
-/* DETALLES */
+/* EPISODIOS.HTML */
 .detalle_container {
   max-width: 1000px;
   flex-flow: wrap;
@@ -515,4 +505,97 @@ ul, #myUL {
  .libros {
   display: block;
  } 
+}
+
+/* DETALLE_LIBRO.HTML */
+.detalle_libro_container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.button_text {
+  display: grid;
+  grid-template-columns: 33% auto;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+
+.detalle_libro_container a:link, a:visited {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: var(--color-fondo-body);
+  color: black;
+  border: 2px solid var(--color-principal);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  height: 10px;
+  width: 100px;
+}
+
+.detalle_libro_container a:hover, a:active {
+  background-color: var(--color-principal);
+  color: white;
+}
+
+.detalle_libro_container h3 {
+  grid-column-start: 2;
+  grid-row-start: 0;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.detalle_libro {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row wrap;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.detalle_libro figure img {
+width: 320px;
+height: 400px;
+}
+
+.detalle_libro figure figcaption {
+text-align: center;
+}
+
+.detalle_libro div {
+  display: block;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  text-align: justify;
+
+}
+
+
+@media (max-width: 600px){
+  * {
+    margin: 3px;
+  }
+  
+  .detalle_libro {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    margin: 10 auto;
+  }
+  .detalle_libro figure {
+    max-width: 100vh;
+    margin: 0 auto;
+  }
+  .button_text {
+    display: block;
+    text-align: left;
+  }
+
 }
