@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solución PEC1. Herramientas HTML y CSS.</title>
+    <title>Solución PEC2. Herramientas HTML y CSS.</title>
     <meta name="author" content="Moisés Segura Cedrés">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
@@ -16,22 +16,17 @@
 <body>
     <header>
         <div>
-            <a href="index.html"><img src="img/Caricatura_de_Galdós_en_Madrid_Cómico_ca.1898.png" alt="Caricatura de Benito Pérez Galdós, lleva a la página principal."></a>
-            <nav class="top_menu">
-                <ul>
-                    <li><a href="categoria.html">Categorías</a></li>
-                    <li><a href="presentacion.html">Presentación</a></li>
-                    <li><a href="enlaces.html">Enlaces</a></li>
-                </ul>
-            </nav>
+            <a href="index.html"><img src="img/logo.webp" alt="Logo de la página."></a>
+            <h1>Benito Pérez Galdós</h1>
         </div>
     </header>
     <main class="index_container">
         <div class="portada">
-            <figure>
-                <img src="img/portada.jpg"/>
-                <figcaption>Galdós pintado a sus 51 años de edad por Joaquín Sorolla.</figcaption>
-            </figure>
+            <picture>
+                <source media="(max-width: 480px)" srcset="img/portada_de_cerca.jpg" />
+                <source media="(min-width: 481px) and (max-width: 830px)" srcset="img/portada.jpg" /> 
+                <img src="img/portada_de_cerca.jpg" alt="Benito Pérez Galdós posando sentado" />
+            </picture>
             <div class="texto_portada">
             <cite>«Imagen de la vida es la Novela, y el arte de componerla estriba en reproducir los caracteres humanos, las pasiones, las debilidades, lo grande y lo pequeño, las almas y las fisonomías, todo lo espiritual y lo físico que nos constituye y nos rodea, y el lenguaje, que es la marca de raza, y las viviendas, que son el signo de familia, y la vestidura, que diseña los últimos trazos externos de la personalidad: todo esto sin olvidar que debe existir perfecto fiel de balanza entre la exactitud y la belleza de la reproducción...».</cite>
             
@@ -55,8 +50,16 @@
     
     <footer>
         <div class="alumno_asig">
+            <a href="index.html"><img src="img/libro_logo.webp" alt="Logo de la página."></a>
             <p class="alumno">2022 &copy;Moisés Segura Cedrés</p>
-            <p class="asignatura">Herramientas HTML y CSS aula 1</p>
+            <p class="alumno">Herramientas HTML y CSS aula 1</p>
+            <nav class="footer_menu">
+                <ul>
+                    <li><a href="categoria.html">Categorías</a></li>
+                    <li><a href="presentacion.html">Presentación</a></li>
+                    <li><a href="enlaces.html">Enlaces</a></li>
+                </ul>
+            </nav>
         </div>
     </footer>
     <script type="module" src="js/app.js"></script>

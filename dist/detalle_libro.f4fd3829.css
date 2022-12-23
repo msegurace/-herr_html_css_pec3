@@ -1,0 +1,2 @@
+.collapsible{color:#444;cursor:pointer;width:100%;text-align:left;background-color:#eee;border:none;outline:none;padding:18px;font-size:2rem}.collapsible:after{content:"➕";color:#fff;float:right;margin-left:5px;font-size:13px}.active,.collapsible:hover{background-color:#ccc}.active:after{content:"➖"}.collapsecontent{max-height:0;background-color:#fff;padding:0 18px;transition:max-height .2s ease-out;overflow:hidden}
+/*# sourceMappingURL=detalle_libro.f4fd3829.css.map */
